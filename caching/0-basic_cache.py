@@ -24,4 +24,7 @@ class BasicCache(BaseCaching):
         Get
         :return: cache_data
         """
-        return self.cache_data.get(key, None)
+        if key is None or key not in self.cache_data:
+            return None
+        else:
+            return self.cache_data.get(key, None)
