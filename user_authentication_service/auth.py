@@ -73,7 +73,6 @@ class Auth:
         except NoResultFound:
             return None
 
-
     def get_reset_password_token(self, email: str) -> str:
         """ reset token """
         try:
